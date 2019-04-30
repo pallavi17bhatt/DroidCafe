@@ -2,7 +2,6 @@
 <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/label_spinner"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".OrderActivity">
@@ -67,7 +66,7 @@
 
         android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="16dp"
         android:ems="10"
         android:gravity="left|top"
         android:hint="Enter Address"
@@ -90,11 +89,12 @@
 
     <EditText
         android:id="@+id/phone_text"
-        android:layout_width="134dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
         android:ems="10"
-        android:hint="Enter Phone"
+        android:hint="Enter Your Phone Number"
         android:inputType="phone"
         app:layout_constraintBaseline_toBaselineOf="@+id/phone_label"
         app:layout_constraintEnd_toEndOf="parent"
@@ -152,9 +152,9 @@
             android:id="@+id/sameday"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:checked="true"
             android:onClick="onRadioButtonClicked"
-            android:text="@string/sameday" />
+            android:text="@string/sameday"
+            android:checked="true"/>
 
         <RadioButton
             android:id="@+id/nextday"
@@ -172,20 +172,6 @@
 
 
     </RadioGroup>
-
-    <Spinner
-        android:id="@+id/spinner"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginTop="24dp"
-        android:layout_marginEnd="24dp"
-        android:layout_marginRight="24dp"
-
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/phone_label"
-        app:layout_constraintTop_toBottomOf="@+id/address_text" />
 
 
 </android.support.constraint.ConstraintLayout>
